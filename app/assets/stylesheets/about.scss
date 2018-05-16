@@ -1,0 +1,119 @@
+// Place all the styles related to the About controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x:hidden;
+  width:100%;
+  height: 100%;
+}
+
+.nav-item {
+  padding: 0 6px 0 6px;
+}
+
+.nav-item a:hover {
+  background-color: #474646 !important;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.fixed-top {
+  border-radius: 0px;
+  left: 0;
+  right: 0;
+}
+
+// supposed to keep the icons on the navbar to the right, it seems to have stopped working spontaneously :\
+.stayright {
+  position: relative;
+  right: -70px;
+}
+
+.night-mode-button {
+  position: relative;
+  float: right;
+  border-radius: 5px;
+  background-color: #063989;
+  top: -50px;
+  right: -50px;
+  color: white;
+}
+
+
+// Tells the page what to do when night mode is active
+.content.-nightmode {
+  & {
+    // Ensures that night mode colors are black and white
+    background: #000 !important;
+    color: #333 !important;
+  }  
+  .content-inner, .footer, img, video, .tohide, .description {
+    & {
+      -webkit-filter: invert(1) hue-rotate(180deg);
+      filter: invert(1) hue-rotate(180deg);    
+    }    
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 32px;
+  line-height: 20px;
+  background-color: #f5f5f5;
+}
+
+// This controls the div that displays all of the information about the book
+.description {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  display: block;
+  border: 1px solid black;
+  background-color: #f7faff;
+  z-index: 999;
+  width: 800px;
+  height: 500px;
+  overflow: scroll;
+  padding: 10px 0 0 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+// This sets up the transparent background when you click the description
+.cover {
+  position: absolute;
+  display: block;
+  z-index: 998;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.button1 {
+  position: relative;
+  left: 20%;
+}
+
+// For the "X" button that appears at the right of the description
+.button2 {
+  position: relative;
+  float: right;
+  text-decoration: none;
+  background-color: #f7faff;
+  border: none;
+}
+
+.hiddenthing {
+  visibility: hidden;
+}
